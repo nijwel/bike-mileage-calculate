@@ -1,0 +1,134 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(135deg, #74ebd5, #acb6e5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 10px;
+}
+
+.calculator {
+  background-color: #ffffff;
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  max-width: 450px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+h2 {
+  margin-bottom: 25px;
+  color: #333;
+}
+
+label {
+  display: block;
+  text-align: left;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #555;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+}
+
+input[type="number"]:focus {
+  border-color: #4caf50;
+  outline: none;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+button {
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button.calculate {
+  background-color: #4caf50;
+  color: white;
+}
+
+button.calculate:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+}
+
+button.clear {
+  background-color: #f44336;
+  color: white;
+}
+
+button.clear:hover {
+  background-color: #e53935;
+  transform: translateY(-2px);
+}
+
+.result {
+  margin-top: 10px;
+  background-color: #f0f9f0;
+  border: 1px solid #c8e6c9;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: left;
+  color: #333;
+  display: none;
+}
+
+.result p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.alert {
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ff4c4c;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 0.5s, top 0.5s;
+  z-index: 10;
+}
+
+.alert.show {
+  opacity: 1;
+  top: -20px;
+}
+
+@media (max-width: 500px) {
+  .calculator {
+    padding: 20px 15px;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+}
